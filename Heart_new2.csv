@@ -1,0 +1,21 @@
+HeartDisease,BMI,Smoking,AlcoholDrinking,Stroke,PhysicalHealth,MentalHealth,DiffWalking,Sex,AgeCategory,Race,Diabetic,PhysicalActivity,GenHealth,SleepTime,Asthma,KidneyDisease,SkinCancer
+No,16.6,Yes,No,No,3,30,No,Female,55-59,White,Yes,Yes,Very good,5,Yes,No,Yes
+No,20.34,No,No,Yes,0,0,No,Female,80 or older,White,No,Yes,Very good,7,No,No,No
+No,26.58,Yes,No,No,20,30,No,Male,65-69,White,Yes,Yes,Fair,8,Yes,No,No
+No,24.21,No,No,No,0,0,No,Female,75-79,White,No,No,Good,6,No,No,Yes
+No,23.71,No,No,No,28,0,Yes,Female,40-44,White,No,Yes,Very good,8,No,No,No
+Yes,28.87,Yes,No,No,6,0,Yes,Female,75-79,Black,No,No,Fair,12,No,No,No
+No,21.63,No,No,No,15,0,No,Female,70-74,White,No,Yes,Fair,4,Yes,No,Yes
+No,31.64,Yes,No,No,5,0,Yes,Female,80 or older,White,Yes,No,Good,9,Yes,No,No
+No,26.45,No,No,No,0,0,No,Female,80 or older,White,"No, borderline diabetes",No,Fair,5,No,Yes,No
+No,40.69,No,No,No,0,0,Yes,Male,65-69,White,No,Yes,Good,10,No,No,No
+Yes,34.3,Yes,No,No,30,0,Yes,Male,60-64,White,Yes,No,Poor,15,Yes,No,No
+No,28.71,Yes,No,No,0,0,No,Female,55-59,White,No,Yes,Very good,5,No,No,No
+No,28.37,Yes,No,No,0,0,Yes,Male,75-79,White,Yes,Yes,Very good,8,No,No,No
+No,28.15,No,No,No,7,0,Yes,Female,80 or older,White,No,No,Good,7,No,No,No
+No,29.29,Yes,No,No,0,30,Yes,Female,60-64,White,No,No,Good,5,No,No,No
+No,29.18,No,No,No,1,0,No,Female,50-54,White,No,Yes,Very good,6,No,No,No
+No,26.26,No,No,No,5,2,No,Female,70-74,White,No,No,Very good,10,No,No,No
+No,22.59,Yes,No,No,0,30,Yes,Male,70-74,White,"No, borderline diabetes",Yes,Good,8,No,No,No
+No,29.86,Yes,No,No,0,0,Yes,Female,75-79,Black,Yes,No,Fair,5,No,Yes,No
+No,18.13,No,No,No,0,0,No,Male,80 or older,White,No,Yes,Excellent,8,No,No,Yes
