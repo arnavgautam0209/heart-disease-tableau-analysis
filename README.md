@@ -60,6 +60,10 @@ Analyze key health indicators that contribute to heart disease using the Behavio
 ├── Heart_new2.csv                          # Original raw dataset
 ├── heart_disease.db                        # SQLite database (all tables & views)
 ├── db_setup.py                             # Full SQL pipeline script
+├── tableau_connector.py                    # Live data connector server (WDC + REST API)
+├── generate_extract.py                     # Tableau extract file generator
+├── refresh_scheduler.py                    # Automated data refresh scheduler
+├── heart_disease_datasource.tds            # Tableau Data Source config (plug-and-play)
 ├── tableau_exports/                        # Tableau-ready CSV exports
 │   ├── heart_disease_tableau.csv           #   Main denormalized fact table
 │   ├── prevalence_by_age_sex.csv           #   HD prevalence by age & sex
@@ -68,6 +72,8 @@ Analyze key health indicators that contribute to heart disease using the Behavio
 │   ├── gen_health_vs_hd.csv                #   General health vs HD
 │   ├── risk_tier_summary.csv               #   Low/Medium/High risk tiers
 │   └── comorbidity_impact.csv              #   Comorbidity count vs HD
+├── tableau_extracts/                       # Generated extract files + manifest
+│   └── extract_manifest.json               #   Extract version tracking
 ├── README.md                               # Project documentation
 ```
 
@@ -121,14 +127,75 @@ python3 db_setup.py
 | `vw_comorbidity_impact` | HD rate by number of comorbidities |
 
 ## How to Use with Tableau
-1. Clone or download this repository
-2. Run `python3 db_setup.py` to build the database and exports
-3. **Option A — Connect to SQLite directly:**
-   - In Tableau → Connect → To a Server → Other Databases (ODBC) → select `heart_disease.db`
-   - Use the `heart_disease_tableau` table or any SQL view
-4. **Option B — Use exported CSVs:**
-   - In Tableau → Connect → Text File → open files from `tableau_exports/`
-5. Build visualizations to explore heart disease risk factors
+
+### Option 1 — Live Connection (Web Data Connector)
+Best for **real-time / interactive** analysis with dynamic data access.
+
+```bash
+# 1. Start the connector server
+python3 tableau_connector.py
+
+# 2. In Tableau Desktop:
+#    Connect → Web Data Connector → enter: http://localhost:8765/wdc
+#    Select dataset(s) → click "Get Data"
+```
+
+The WDC server provides:
+| Endpoint | Purpose |
+|----------|---------|
+| `GET /wdc` | Interactive Tableau Web Data Connector page |
+| `GET /api/health` | Health check — verify DB connectivity & data quality status |
+| `GET /api/datasets` | List all 7 datasets with row counts |
+| `GET /api/schema/<key>` | Column schema (types, aliases) for WDC `getSchema` |
+| `GET /api/data/<key>` | Full JSON data feed (supports `?limit=N&offset=N`) |
+| `GET /api/query?sql=...` | Custom read-only SQL queries |
+| `GET /api/refresh` | Re-run the full pipeline & refresh the database |
+
+**Security:** The database is opened in read-only mode. Write operations (`INSERT`, `UPDATE`, `DELETE`, `DROP`, etc.) are blocked. CORS headers are set for cross-origin Tableau access.
+
+### Option 2 — Tableau Data Source File (.tds)
+Best for **pre-configured** plug-and-play connection.
+
+1. Run `python3 db_setup.py` to build the database
+2. Double-click `heart_disease_datasource.tds` to open directly in Tableau
+3. All columns are pre-configured with correct data types and friendly aliases
+
+### Option 3 — CSV Extracts (No Server Required)
+Best for **Tableau Public** or offline use.
+
+```bash
+# Generate optimized extract files
+python3 generate_extract.py
+```
+
+Then in Tableau: **Connect → Text File** → open files from `tableau_exports/` or `tableau_extracts/`.
+
+### Option 4 — Direct SQLite Connection
+Best for **advanced users** with Tableau Desktop.
+
+1. In Tableau → Connect → To a Server → Other Databases (ODBC)
+2. Select `heart_disease.db`
+3. Use the `heart_disease_tableau` table or any of the 6 SQL views
+
+## Automated Data Refresh
+
+Keep Tableau dashboards up-to-date with scheduled pipeline re-runs:
+
+```bash
+# Run a one-time refresh (pipeline + extracts)
+python3 refresh_scheduler.py --once
+
+# Auto-refresh every hour
+python3 refresh_scheduler.py --interval 3600
+
+# Install a daily cron job (runs at 2 AM)
+python3 refresh_scheduler.py --install-cron
+
+# Remove the cron job
+python3 refresh_scheduler.py --uninstall-cron
+```
+
+Each refresh re-runs: CSV → SQLite (clean/transform) → Extracts → Exports, and logs results to `refresh_log.json`.
 
 ## Key Analysis Areas
 - Heart disease prevalence by age group and gender
