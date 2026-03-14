@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Heart Disease Tableau Analysis — Demo</title>
+  <style>
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0;background:#0f1724;color:#e6eef6}
+    .wrap{max-width:980px;margin:48px auto;padding:28px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:12px;border:1px solid rgba(255,255,255,0.04)}
+    h1{margin:0 0 8px;font-size:28px}
+    p.lead{color:#bcd2ff}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:20px}
+    .card{background:rgba(255,255,255,0.02);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+    a.button{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:8px;background:#60a5fa;color:#04233a;text-decoration:none;font-weight:600}
+    footer{margin-top:28px;color:#98a8c7;font-size:13px}
+    code{background:#071329;padding:2px 6px;border-radius:6px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Heart Disease Tableau Analysis — Live Demo</h1>
+    <p class="lead">Lightweight demo site for the <strong>heart-disease-tableau-analysis</strong> project. Use this URL as the public demo link for your skill wallet.</p>
+
+    <p>What's included in the demo:</p>
+    <ul>
+      <li>Project overview and datasets (CSV + ready-to-use extracts)</li>
+      <li>Instructions to connect using Tableau (WDC, CSV, or direct SQLite)</li>
+      <li>Quick-start commands to run locally or trigger scheduled refreshes</li>
+    </ul>
+
+    <div class="cards">
+      <div class="card">
+        <strong>Live connector (WDC)</strong>
+        <div style="margin-top:8px">Start the connector locally and point Tableau to <code>http://localhost:8765/wdc</code> to connect interactively.</div>
+      </div>
+
+      <div class="card">
+        <strong>Extracts & CSVs</strong>
+        <div style="margin-top:8px">Pre-generated extracts are available in the repository under <code>tableau_extracts/</code> and <code>tableau_exports/</code>.</div>
+      </div>
+
+      <div class="card">
+        <strong>README & Setup</strong>
+        <div style="margin-top:8px">See the repo <a href="https://github.com/arnavgautam0209/heart-disease-tableau-analysis">README on GitHub</a> for full setup and usage steps.</div>
+      </div>
+
+    </div>
+
+    <h3 style="margin-top:20px">Public demo URL</h3>
+    <p>When the Pages workflow finishes the site will be published at:</p>
+    <p><a class="button" href="https://arnavgautam0209.github.io/heart-disease-tableau-analysis/" target="_blank">https://arnavgautam0209.github.io/heart-disease-tableau-analysis/</a></p>
+
+    <h3 style="margin-top:20px">Notes</h3>
+    <ul>
+      <li>The demo is a static landing page describing the project and connection options. For a fully interactive hosted web app (Flask dashboard), we can deploy the Flask app to a hosting platform (Render, Railway, Fly.io, etc.) — tell me which provider you prefer and I can deploy it.</li>
+      <li>If you want the demo URL to show live Tableau dashboards, we can publish screenshots or embed Tableau Public views into this page.</li>
+    </ul>
+
+    <footer>Generated automatically. If the demo URL does not appear within a few minutes, open the repository Actions tab and check the "Deploy docs to GitHub Pages" workflow run.</footer>
+  </div>
+</body>
+</html>
