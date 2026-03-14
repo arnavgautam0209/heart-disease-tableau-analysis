@@ -1,6 +1,0 @@
-gen_health,gen_health_order,total,hd_count,hd_rate_pct,avg_risk_score
-Poor,1,259,92,35.52,6.49
-Fair,2,670,140,20.9,4.16
-Good,3,1426,172,12.06,1.99
-Very good,4,1415,67,4.73,1.23
-Excellent,5,724,12,1.66,0.84

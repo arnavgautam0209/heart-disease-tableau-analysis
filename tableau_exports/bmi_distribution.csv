@@ -1,9 +1,0 @@
-heart_disease_label,bmi_category,bmi_order,count,avg_bmi,min_bmi,max_bmi
-No,Underweight,1,58,17.26,14.35,18.47
-Yes,Underweight,1,7,16.64,12.48,18.41
-No,Normal,2,1039,22.58,18.52,24.97
-Yes,Normal,2,110,22.64,18.56,24.94
-No,Overweight,3,1363,27.41,25.0,29.99
-Yes,Overweight,3,165,27.38,25.06,29.99
-No,Obese,4,1551,35.91,30.0,75.82
-Yes,Obese,4,201,35.98,30.04,63.62

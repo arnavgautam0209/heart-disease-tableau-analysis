@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero-section bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1 class="display-4">Heart Disease Analysis</h1>
+                <p class="lead">Transforming healthcare data into actionable insights using Tableau</p>
+                <p>Analyze patient data, identify risk factors, and support better decision-making for healthcare providers and policymakers.</p>
+                <div class="mt-4">
+                    <a href="/dashboard" class="btn btn-primary btn-lg me-2">View Dashboard</a>
+                    <a href="/story" class="btn btn-outline-primary btn-lg">Explore Story</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="text-center p-5" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px;">
+                    <div style="font-size: 150px; color: white;">❤️</div>
+                    <h3 class="text-white mt-3">Heart Health Matters</h3>
+                    <p class="text-white">Analyzing 300+ patient records for better healthcare insights</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">Project Scenarios</h2>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">🏥 Scenario 1: Clinical Analysis</h5>
+                    <p class="card-text">Dr. Sharma, a senior cardiologist, analyzes patient data segmented by age, gender, BMI, cholesterol levels, and smoking habits to identify high-risk groups.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">🏛️ Scenario 2: Policy Making</h5>
+                    <p class="card-text">Government health departments study trends in heart disease prevalence across regions to develop preventive health policies and programs.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">👤 Scenario 3: Personal Health</h5>
+                    <p class="card-text">Individuals monitor their health risks using simplified dashboards to make informed lifestyle decisions and reduce disease risk.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Key Features</h2>
+        <div class="row">
+            <div class="col-md-3 text-center mb-4">
+                <div class="feature-icon">📊</div>
+                <h5>Interactive Dashboards</h5>
+                <p>Explore data with dynamic visualizations</p>
+            </div>
+            <div class="col-md-3 text-center mb-4">
+                <div class="feature-icon">🔍</div>
+                <h5>Risk Analysis</h5>
+                <p>Identify high-risk patient groups</p>
+            </div>
+            <div class="col-md-3 text-center mb-4">
+                <div class="feature-icon">📈</div>
+                <h5>Trend Insights</h5>
+                <p>Track disease patterns over time</p>
+            </div>
+            <div class="col-md-3 text-center mb-4">
+                <div class="feature-icon">🎯</div>
+                <h5>Data Filters</h5>
+                <p>Customize views by demographics</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

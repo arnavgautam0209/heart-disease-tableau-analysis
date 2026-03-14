@@ -1,0 +1,91 @@
+/* Heart Disease Analysis - Custom Styles */
+
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.hero-section h1 {
+    font-weight: bold;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* Dashboard specific styles */
+#tableauViz, #tableauStory {
+    background: #f8f9fa;
+    min-height: 600px;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .display-6 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Stats cards */
+.card .display-6 {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Accordion styling */
+.accordion-button:not(.collapsed) {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: var(--primary-color);
+}

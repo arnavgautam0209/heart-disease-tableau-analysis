@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}About - Heart Disease Analysis{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h1 class="mb-4">About This Project</h1>
+    
+    <div class="row">
+        <div class="col-md-8">
+            <h3>Project Overview</h3>
+            <p>Heart disease remains one of the leading causes of mortality worldwide. This project leverages <strong>Tableau</strong> as a powerful data visualization and business intelligence tool to analyze heart disease data and transform raw data into meaningful dashboards.</p>
+            
+            <h3 class="mt-4">Technical Architecture</h3>
+            <p>Our solution follows a comprehensive data pipeline:</p>
+            <ol>
+                <li><strong>Data Collection:</strong> Heart disease dataset from UCI ML Repository</li>
+                <li><strong>Data Storage:</strong> MySQL database for structured storage</li>
+                <li><strong>Data Processing:</strong> SQL operations and Python scripts for data preparation</li>
+                <li><strong>Visualization:</strong> Tableau dashboards and stories</li>
+                <li><strong>Web Integration:</strong> Flask application for dashboard embedding</li>
+            </ol>
+
+            <h3 class="mt-4">Key Features</h3>
+            <ul>
+                <li>Interactive dashboards with multiple visualizations</li>
+                <li>Data filters for demographic analysis</li>
+                <li>Risk factor identification and correlation analysis</li>
+                <li>Story-based narrative for data insights</li>
+                <li>Responsive design for multiple devices</li>
+                <li>Real-time data updates</li>
+            </ul>
+
+            <h3 class="mt-4">Technologies Used</h3>
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <ul>
+                        <li>Tableau Desktop & Server</li>
+                        <li>Python 3.8+</li>
+                        <li>Flask Web Framework</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul>
+                        <li>MySQL Database</li>
+                        <li>Pandas & NumPy</li>
+                        <li>Bootstrap 5</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5>Team Members</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><strong>Atul Singh</strong><br><small>Data Collection</small></li>
+                        <li class="mb-2"><strong>Cyrus Prakash Tiwari</strong><br><small>Database & SQL Operations</small></li>
+                        <li class="mb-2"><strong>Arpit Pandey</strong><br><small>Tableau Integration & Publishing</small></li>
+                        <li class="mb-2"><strong>Atul Raj Gautam</strong><br><small>Data Preparation & Dashboard Design</small></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-header bg-success text-white">
+                    <h5>Project Links</h5>
+                </div>
+                <div class="card-body">
+                    <p><a href="#" class="btn btn-sm btn-outline-primary w-100 mb-2">GitHub Repository</a></p>
+                    <p><a href="#" class="btn btn-sm btn-outline-primary w-100 mb-2">Live Demo</a></p>
+                    <p><a href="#" class="btn btn-sm btn-outline-primary w-100">Video Demo</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
