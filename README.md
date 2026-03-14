@@ -13,23 +13,23 @@ Google Drive/Database → Tableau → Dashboard → Tableau Server → Flask UI 
 ## Team Members & Tasks
 
 ### Data Collection & Storage
-- **Atul Singh**: Downloading the dataset
-- **Cyrus Prakash Tiwari**: Storing Data in DB & Perform SQL Operations medium
+- **Arnav Gautam**: Downloading the dataset
+- **Arnav Gautam**: Storing Data in DB & Perform SQL Operations medium
 
 ### Database Integration
-- **Arpit Pandey**: Connect DB with Tableau, Amount of Data to DB, Publishing
+- **Arnav Gautam**: Connect DB with Tableau, Amount of Data to DB, Publishing
 
 ### Data Preparation & Visualization
-- **Atul Raj Gautam**: Prepare Data for Visualization, Responsive Design of Dashboard, No of Scenes of Story
-- **Cyrus Prakash Tiwari**: No of Unique Visualizations, No of Calculation Fields
+- **Aryan Snangwan**: Prepare Data for Visualization, Responsive Design of Dashboard, No of Scenes of Story
+- **Aryan Snangwan**: No of Unique Visualizations, No of Calculation Fields
 
 ### Performance & Web Integration
-- **Arpit Pandey**: Utilization of Data Filters, No of Visualizations/Graphs
-- **Arpit Pandey**: Dashboard and Story embed with UI With Flask
+- **Ashish Prajapati**: Utilization of Data Filters, No of Visualizations/Graphs
+- **Ashish Prajapati**: Dashboard and Story embed with UI With Flask
 
 ### Documentation
-- **Atul Raj Gautam**: Project Documentation-Step by step project development procedure
-- **Atul Singh**: Record explanation Video for the project's end-to-end solution
+- **Ashok Kumar Yadav**: Project Documentation-Step by step project development procedure
+- **Ashok Kumar Yadav**: Record explanation Video for the project's end-to-end solution
 
 ## Project Scenarios
 
